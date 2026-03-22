@@ -1,24 +1,59 @@
-# 🏥 Disease Symptom Predictor
+# Disease Symptom Predictor
 
-**ML Random Forest model: 132 symptoms → 41 diseases (85%+ accuracy)**
+A Machine Learning web app that predicts the most likely diseases based on selected symptoms using a Random Forest classifier trained on 4,920 patient records.
 
-## 🎯 Problem
-70% patients wait 3+ days for diagnosis. Rural areas lack specialists.
+## Live Demo
+https://huggingface.co/spaces/Abhisyanth-M/disease-symptom-predictor
 
-## ✅ Solution
-- ☑️ Symptom checkboxes → Top 3 diseases + probabilities
-- Input: "Fever + Cough + Headache" 
-- Output: "Dengue (82%) | COVID (15%) | Flu (3%)"
+## Problem Statement
+70% of India's population lives in rural areas where access to qualified doctors and specialists is extremely limited. Delayed diagnosis leads to delayed treatment and worse health outcomes.
 
-## 🛠 Tech Stack
-- Random Forest Classifier (100 trees)
-- Streamlit (healthcare UI)
-- Kaggle dataset (132 symptoms, 41 diseases)
+## Solution
+A symptom-based disease prediction app that gives patients data-driven insights about their condition instantly — helping them make informed decisions about seeking medical help.
 
-## 🚀 Live Demo
-Coming tomorrow after model training!
+## Features
+- Search and select from 133 symptoms
+- Predicts Top 3 most likely diseases with probability scores
+- Confidence percentage shown for each prediction
+- Sidebar showing model accuracy and dataset info
+- Trained on real patient data across 41 diseases
 
-## 📈 Day 1 Progress
-- Symptom selection UI (20 checkboxes)
-- Vectorization pipeline  
-- Prediction engine ready
+## Tech Stack
+- Python
+- Scikit-learn
+- Random Forest Classifier
+- Streamlit
+- Pandas
+- NumPy
+
+## Dataset
+- Source: Kaggle — Disease Prediction Using Machine Learning
+- Size: 4,920 patient records
+- Symptoms: 133
+- Diseases: 41
+
+## ML Model
+- Algorithm: Random Forest Classifier
+- Trees: 100
+- Accuracy: 87%+
+- Output: Top 3 diseases with probability scores
+
+## How to Run Locally
+```bash
+git clone https://github.com/Abhisyanth-M/disease-symptom-predictor
+cd disease-symptom-predictor
+pip install -r requirements.txt
+python train_model.py
+streamlit run streamlit_app.py
+```
+
+## Disclaimer
+This app is for educational purposes only. Always consult a qualified doctor for medical advice.
+
+## Limitations
+- Predictions are based on statistical patterns in training data
+- Not a replacement for professional medical diagnosis
+- Dataset is limited to 41 diseases
+
+## GitHub
+https://github.com/Abhisyanth-M/disease-symptom-predictor
